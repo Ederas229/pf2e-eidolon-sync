@@ -1,7 +1,7 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "pf2e-eidolon-sync",
+  "title": "PF2e Eidolon sync",
+  "description": "Sync hero point and hp for the summoner and his eidolon",
   "version": "This is auto replaced",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
@@ -12,40 +12,52 @@
   },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "Ederas",
+      "url": "https://github.com/Ederas229/"
     }
   ],
   "relationships": {
-    "systems": [],
-    "requires": []
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum":"4.5.0"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "pf2e-animal-companions",
+        "type": "module",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json"
+      }
+    ]
   },
   "esmodules": [
     "scripts/module.js"
   ],
-  "scripts": [
-    "scripts/lib/lib.js"
-  ],
-  "styles": [
-    "styles/module.css"
-  ],
-  "languages": [
+  "packs": [
     {
-      "lang": "en",
-      "name": "English",
-      "path": "languages/en.json"
+      "label": "Sync Eidolon",
+      "name": "sync-eidolon-macro",
+      "path": "packs/sync-eidolon-macro.db",
+      "system": "pf2e",
+      "private": false,
+      "type": "Macro"
+    },
+    {
+      "label": "Sync Eidolon",
+      "name": "sync-eidolon-effect",
+      "path": "packs/sync-eidolon-effect.db",
+      "system": "pf2e",
+      "private": false,
+      "type": "Item"
     }
   ],
   "url": "This is auto replaced",
   "manifest": "This is auto replaced",
   "download": "This is auto replaced",
   "license": "LICENSE",
-  "readme": "README.md",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+  "readme": "README.md"
 }
