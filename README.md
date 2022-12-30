@@ -1,0 +1,1 @@
+manifest : https://github.com/Ederas229/pf2e-eidolon-sync/releases/latest/download/module.json
